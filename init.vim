@@ -158,5 +158,5 @@ let g:polyglot_disabled = ['markdown']
 let g:polyglot_disabled = ['autoindent']
 let g:lsp_cxx_hl_use_text_props = 1
 
-hi Pmenu cterm=underline ctermfg=250 ctermbg=235 gui=underline guifg=#bcbcbc guibg=#262626
-hi PmenuSel cterm=underline ctermfg=250 ctermbg=131 gui=underline guifg=#bcbcbc guibg=#af5f5f
+hi Pmenu ctermfg=250 ctermbg=235 guifg=#bcbcbc guibg=#262626
+hi PmenuSel ctermfg=250 ctermbg=131 guifg=#bcbcbc guibg=#af5f5f
