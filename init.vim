@@ -56,8 +56,8 @@ nmap <M-Right> :vertical resize +1<CR>
 nmap <M-Left> :vertical resize -1<CR>
 nmap <M-Down> :resize +1<CR>
 nmap <M-Up> :resize -1<CR>
-map <F12> :!g++ -g % -o %:r<CR>
-map <F11> .\%:r <CR>
+nnoremap <F12> :!g++ -g % -o %:r <CR>
+nnoremap <F11> :term %:r.exe<CR>
 " Search a hightlighted text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
