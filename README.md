@@ -1,1 +1,1 @@
-# minimalism Vim config
+# minimalist Vim config
