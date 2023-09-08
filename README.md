@@ -1,1 +1,1 @@
-# minimalist Vim config
+# Dark Vim Config

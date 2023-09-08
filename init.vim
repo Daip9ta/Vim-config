@@ -64,7 +64,6 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin list
-" (used for Vim-plug - https://github.com/junegunn/vim-plug)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin(stdpath('config').'/plugged')
 " File browser
@@ -81,14 +80,14 @@ call plug#begin(stdpath('config').'/plugged')
 
 " Status bar
 	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 " Terminal
 	Plug 'voldikss/vim-floaterm' 					" Float terminal
 " Code intellisense
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language server 
-	Plug 'alvan/vim-closetag'
 	Plug 'mattn/emmet-vim' 
 	Plug 'preservim/nerdcommenter' 					" Comment code 
-	Plug 'liuchengxu/vista.vim' 					" Function tag bar 
+"   Plug 'liuchengxu/vista.vim' 					" Function tag bar 
 	Plug 'alvan/vim-closetag' 						" Auto close HTML/XML tag 
 
 " Code syntax highlight
@@ -101,17 +100,20 @@ call plug#begin(stdpath('config').'/plugged')
 "discord RPC
 	Plug 'andweeb/presence.nvim'
 "copilot
-    Plug 'github/copilot.vim'  		                "copilot
+ "  Plug 'github/copilot.vim'  		                "copilot
 "deoplete
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 "snippes
+	Plug 'SirVer/ultisnips'
  	Plug 'honza/vim-snippets'
 	Plug 'neovim/nvim-lsp' " nvim-lsp
 	Plug 'prabirshrestha/vim-lsp' " vim-lsp
 	Plug 'autozimu/LanguageClient-neovim' " LanguageClient-neovim
+"GPT
+	Plug 'CoderCookE/vim-chatgpt'
 call plug#end()
 
 
@@ -151,6 +153,10 @@ let g:presence_line_number_text    = "Line %s out of %s"
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['ruby'] = 'ruby,ruby-rails,ruby-1.9'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 "syntax
 
@@ -160,3 +166,7 @@ let g:lsp_cxx_hl_use_text_props = 1
 
 hi Pmenu ctermfg=250 ctermbg=235 guifg=#bcbcbc guibg=#262626
 hi PmenuSel ctermfg=250 ctermbg=131 guifg=#bcbcbc guibg=#af5f5f
+
+"GPT
+let g:openai_api_key='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'
+let g:chat_gpt_temperature = 0.5
